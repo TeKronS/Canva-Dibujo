@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Body = styled.button`
   position: absolute;
-  top: 75px;
   left: calc(50% - 55px);
   z-index: 49;
   width: 110px;
