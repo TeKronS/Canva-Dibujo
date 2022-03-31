@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Canva-Dibujo/static/css/main.75b53274.css",
-    "main.js": "/Canva-Dibujo/static/js/main.95430e00.js",
+    "main.js": "/Canva-Dibujo/static/js/main.0eb7f5b4.js",
     "static/js/377.14fffbfa.chunk.js": "/Canva-Dibujo/static/js/377.14fffbfa.chunk.js",
     "service-worker.js": "/Canva-Dibujo/service-worker.js",
     "index.html": "/Canva-Dibujo/index.html",
     "main.75b53274.css.map": "/Canva-Dibujo/static/css/main.75b53274.css.map",
-    "main.95430e00.js.map": "/Canva-Dibujo/static/js/main.95430e00.js.map",
+    "main.0eb7f5b4.js.map": "/Canva-Dibujo/static/js/main.0eb7f5b4.js.map",
     "377.14fffbfa.chunk.js.map": "/Canva-Dibujo/static/js/377.14fffbfa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.75b53274.css",
-    "static/js/main.95430e00.js"
+    "static/js/main.0eb7f5b4.js"
   ]
 }
