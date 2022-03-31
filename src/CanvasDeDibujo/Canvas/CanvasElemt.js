@@ -109,6 +109,11 @@ const CanvasElmt = ({
     setHeight(target.value);
   }
   //-----------------------------------------
+  function blurInout(e) {
+    if (e.key === "Enter") {
+      e.target.blur();
+    }
+  }
   return (
     <>
       <InputSizeCanvas>
@@ -121,6 +126,7 @@ const CanvasElmt = ({
           step={10}
           min={0}
           max={3000}
+          onKeyDown={blurInout}
         />
         <label htmlFor={"hight"}>Alto</label>
         <input
@@ -131,6 +137,7 @@ const CanvasElmt = ({
           step={10}
           min={0}
           max={3000}
+          onKeyDown={blurInout}
         />
       </InputSizeCanvas>
       <InputRotateContainer ref={rotatorRef}>
