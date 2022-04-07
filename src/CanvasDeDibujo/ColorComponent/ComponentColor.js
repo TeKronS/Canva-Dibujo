@@ -21,22 +21,28 @@ const ComponentColor = ({ funcColor, type = "pencil", dropper, moveColor }) => {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
   let prevX, prevY, boxLeft, boxTop;
   //------------------------------------------------------------------------
-  function handleClick() {
-    if (type === "fill") {
-      ElementRef.current.parentNode.previousSibling.click();
+  function handleClick(e) {
+    if (e.target.id === "ColorContainer") {
+      if (displayColorPicker) {
+        setDisplayColorPicker(false);
+        return;
+      }
+      if (type === "fill") {
+        ElementRef.current.parentNode.previousSibling.click();
+      }
+      finish.current = true;
+      if (fixe.current === false) {
+        ElementRef.current.style.width = "300%";
+      }
+      if (type === "pencil") {
+        if (
+          ElementRef.current.parentNode.previousSibling.previousSibling
+            .checked === true
+        )
+          ElementRef.current.parentNode.parentNode.children[0].click();
+      }
+      setDisplayColorPicker(true);
     }
-    finish.current = true;
-    if (fixe.current === false) {
-      ElementRef.current.style.width = "300%";
-    }
-    if (type === "pencil") {
-      if (
-        ElementRef.current.parentNode.previousSibling.previousSibling
-          .checked === true
-      )
-        ElementRef.current.parentNode.parentNode.children[0].click();
-    }
-    setDisplayColorPicker(true);
   }
   const boxColor = `rgba(${color.r},${color.g},${color.b},${color.a})`;
 
@@ -145,6 +151,7 @@ const ComponentColor = ({ funcColor, type = "pencil", dropper, moveColor }) => {
       onClick={handleClick}
       onMouseLeave={closeTheWindow}
       ref={ElementRef}
+      id={"ColorContainer"}
     >
       {displayColorPicker && (
         <PickerContainer onTouchEnd={toucEnd} onTouchMove={touchMove}>
