@@ -12,7 +12,8 @@ export const Body = styled.button`
   background: rgb(37, 77, 92);
   color: white;
   line-height: 23px;
-
+  cursor: pointer;
+  transition: 350ms ease-in-out 0s;
   @media screen and (max-width: 500px) {
     display: block;
   }

@@ -15,9 +15,15 @@ export const ButtonHidde = () => {
       lineElement.classList.add("hiddenline");
     }
   }
-  function handledClick() {
-    if (visible) setVisible(false);
-    else setVisible(true);
+  function handledClick(e) {
+    if (visible) {
+      e.target.style.transform = "translateX(0)";
+      setVisible(false);
+    } else {
+      e.target.style.transform = "translateX(50px)";
+
+      setVisible(true);
+    }
   }
 
   return (
